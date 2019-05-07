@@ -39,7 +39,7 @@ class InMemoryChatService implements IChatService {
      * @param {Number | undefined} since getting all messages when it is under
      * @returns {ChatMessage[]}
      */
-    retrieveMessages(participant: String, since: Number | undefined): ChatMessage[] {
+    retrieveMessages(participant: String, since?: Number): ChatMessage[] {
         if (!since)
             since = 0;
 
