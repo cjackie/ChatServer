@@ -25,11 +25,13 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.16.4",
+    "lodash": "^4.17.11",
     "winston": "^3.2.1"
   },
   "devDependencies": {
     "@types/body-parser": "^1.17.0",
     "@types/express": "^4.16.1",
+    "@types/lodash": "^4.14.123",
     "concurrently": "^4.1.0",
     "jest": "^24.7.1",
     "nodemon": "^1.19.0",
