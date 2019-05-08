@@ -9,6 +9,11 @@ const app = express();
 app.set("port", 3000);
 
 app.use(bodyParser.json());
+app.use((err: any, req: Request, res: Response, next: NextFunction) => {
+    logger.error(err.stack);
+    res.status(500).send({"error": "unknown"});
+});
+
 app.get("/hello", (req: Request, res: Response, next: NextFunction) => {
     logger.info("Getting a request: " + req.query["k"]);
     res.send("hello from the server");
